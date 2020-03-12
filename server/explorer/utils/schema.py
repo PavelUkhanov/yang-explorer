@@ -118,7 +118,7 @@ def download_helper(username, device, dest, rpc, models):
 
             # write to file
             with open(fname, 'w') as f:
-                f.write(schema[0][0].text)
+                f.write(schema[0][0].text.encode("utf-8"))
 
             # calculate dependency
             parser = Parser(fname)

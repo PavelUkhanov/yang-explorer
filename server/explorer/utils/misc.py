@@ -40,7 +40,7 @@ class Response(object):
 
         if xml is not None:
             response.append(xml)
-        return ET.tostring(response)
+        return ET.tostring(response, encoding=unicode)
 
     @staticmethod
     def error(_type, msg, xml=None):
